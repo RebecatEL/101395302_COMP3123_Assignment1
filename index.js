@@ -14,6 +14,14 @@ app.use(express.urlencoded({extended: true}))
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(function (req, res, next) {
+    //Enabling CORS
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT, DELETE");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization");
+      next();
+    });
+
 // DB connection
 const DB_CONNECTION_STRING = "mongodb+srv://vercel-admin-user:Wh2ichcid3PmZQ5Y@cluster0.etztr7w.mongodb.net/F2023_comp3123?retryWrites=true&w=majority"
 mongoose.connect(DB_CONNECTION_STRING, {
