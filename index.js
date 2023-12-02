@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 
 // DB connection
-const DB_CONNECTION_STRING = "mongodb+srv://rootadmin:N6Ejfd8aEbiryQjk@cluster0.etztr7w.mongodb.net/F2023_comp3123?retryWrites=true&w=majority"
+const DB_CONNECTION_STRING = "mongodb+srv://vercel-admin-user:Wh2ichcid3PmZQ5Y@cluster0.etztr7w.mongodb.net/F2023_comp3123?retryWrites=true&w=majority"
 mongoose.connect(DB_CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true
