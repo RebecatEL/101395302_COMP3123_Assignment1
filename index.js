@@ -2,6 +2,7 @@ var express = require('express')
 var mongoose = require('mongoose');
 var user = require("./routes/user")
 var emp = require("./routes/employee")
+const bodyParser = require('body-parser');
 
 const SERVER_PORT = 8089
 var app = express()
