@@ -44,7 +44,7 @@ routes.get("/employees/:eid", async (req, res) => {
 routes.put("/employees/:eid", async (req, res) => {
     //
     try {
-        const updatedUser = await EmpModel.findByIdAndUpdate(req.params.eid, req.body, {new:true})
+        const updatedUser = await EmpModel.findByIdAndUpdate(new ObjectId(req.params.eid), req.body, {new:true})
         if (updatedUser) {
             res.json(updatedUser)
         } else {
