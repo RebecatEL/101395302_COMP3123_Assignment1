@@ -32,7 +32,7 @@ routes.post("/employees", async (req, res) => {
 // 5. Get employee deatils By ID
 routes.get("/employees/:eid", async (req, res) => {
     try {
-        const empDetails = await EmpModel.findById(req.params.eid)
+        const empDetails = await EmpModel.findById(new ObjectId(req.params.eid))
         res.status(200).send(empDetails)
     } catch (error) { 
         res.status(500).send(error)
