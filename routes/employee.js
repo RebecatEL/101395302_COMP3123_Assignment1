@@ -3,7 +3,7 @@ const EmpModel = require('../models/Employee')
 
 const routes = express.Router()
 
-//http://localhost:8089/api/vi/emp/employees
+//http://localhost:8089/api/v1/emp/employees
 // 3. Get All Employees
 routes.get("/employees", async (req, res) => {
     try {
@@ -14,7 +14,7 @@ routes.get("/employees", async (req, res) => {
     }
 })
 
-//http://localhost:8089/api/vi/emp/employees
+//http://localhost:8089/api/v1/emp/employees
 // 4. Allow user to create new employee account
 routes.post("/employees", async (req, res) => {
     try {
@@ -28,7 +28,7 @@ routes.post("/employees", async (req, res) => {
     }
 })
 
-//http://localhost:8089/api/vi/emp/employees/eid
+//http://localhost:8089/api/v1/emp/employees/eid
 // 5. Get employee deatils By ID
 routes.get("/employees/:eid", async (req, res) => {
     try {
@@ -39,7 +39,7 @@ routes.get("/employees/:eid", async (req, res) => {
     }
 })
 
-//http://localhost:8089/api/vi/emp/employees/eid
+//http://localhost:8089/api/v1/emp/employees/eid
 // 6. Update employee details By ID
 routes.put("/employees/:eid", async (req, res) => {
     //
@@ -55,7 +55,7 @@ routes.put("/employees/:eid", async (req, res) => {
     }
 })
 
-//http://localhost:8089/api/vi/emp/employees?eid=xxx
+//http://localhost:8089/api/v1/emp/employees?eid=xxx
 // 7. Delete employee by employee id
 routes.delete("/employees", async (req, res) => {
     try {

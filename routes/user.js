@@ -3,7 +3,7 @@ const UserModel = require('../models/User')
 
 const routes = express.Router()
 
-//http://localhost:8089/api/vi/user/signup
+//http://localhost:8089/api/v1/user/signup
 // 1. Allow user to create new account
 routes.post("/signup", async (req, res) => {
     try {
@@ -17,13 +17,13 @@ routes.post("/signup", async (req, res) => {
     }
 })
 
-//http://localhost:8089/api/vi/user/login
+//http://localhost:8089/api/v1/user/login
 // 2. Allow user to access the system
-routes.post("/login", async (req, res) => {
+routes.post("/login",  (req, res) => {
     try {
         const { username, password } = req.body
         //check if valid username/ email
-        const validateUser = await UserModel.findOne({
+        const validateUser =  UserModel.findOne({
             $or: [{ username: username }, { email: username }],
             password: password
         })
