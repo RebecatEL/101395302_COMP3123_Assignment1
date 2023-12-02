@@ -8,6 +8,8 @@ var app = express()
 
 app.use(express.json())
 app.use(express.urlencoded())
+app.use(bodyParser.json({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // DB connection
 const DB_CONNECTION_STRING = "mongodb+srv://vercel-admin-user:Wh2ichcid3PmZQ5Y@cluster0.etztr7w.mongodb.net/F2023_comp3123?retryWrites=true&w=majority"
