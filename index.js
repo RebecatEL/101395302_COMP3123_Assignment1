@@ -3,10 +3,11 @@ var mongoose = require('mongoose');
 var user = require("./routes/user")
 var emp = require("./routes/employee")
 const bodyParser = require('body-parser');
+var app = express()
 const cors = require('cors');
 
 const SERVER_PORT = 8089
-var app = express()
+
 
 app.use(cors());
 app.use(express.json({extended: true}))
