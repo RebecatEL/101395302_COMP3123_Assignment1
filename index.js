@@ -11,7 +11,7 @@ const SERVER_PORT = 8089
 
 
 app.use(cors({
-    origin: '*'
+    origin: '*' // allow all origins
 }));
 app.use(express.json({extended: true}))
 app.use(express.urlencoded({extended: true}))
