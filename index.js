@@ -3,8 +3,9 @@ var mongoose = require('mongoose');
 var user = require("./routes/user")
 var emp = require("./routes/employee")
 const bodyParser = require('body-parser');
-var app = express()
 const cors = require('cors');
+var app = express()
+
 
 const SERVER_PORT = 8089
 
