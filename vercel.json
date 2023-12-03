@@ -21,10 +21,21 @@
             "headers":{
                 "Access-Control-Allow-Origin":"*",
                 "Access-Control-Allow-Methods":"GET, POST, PUT, DELETE, OPTIONS, PATCH",
-                "Access-Control-Allow-Headers":"X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding"
+                "Access-Control-Allow-Headers":"X-Requested-With, Content-Type, Origin, Authorization, Accept, Accept-Version, Security-Token, Accept-Encoding, X-CSRF-Token, X-Api-Key, Cache-Control, X-File-Name, Content-Length, Content-MD5, Date, X-Api-Version"
             }
         }
-    ]
+    ],
+    "headers": [
+        {
+          "source": "/api/(.*)",
+          "headers": [
+            { "key": "Access-Control-Allow-Credentials", "value": "true" },
+            { "key": "Access-Control-Allow-Origin", "value": "*" },
+            { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
+            { "key": "Access-Control-Allow-Headers", "value": "X-Requested-With, Content-Type, Origin, Authorization, Accept, Accept-Version, Security-Token, Accept-Encoding, X-CSRF-Token, X-Api-Key, Cache-Control, X-File-Name, Content-Length, Content-MD5, Date, X-Api-Version" }
+          ]
+        }
+      ]
     
 
       
