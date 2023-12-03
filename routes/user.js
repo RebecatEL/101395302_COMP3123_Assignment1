@@ -11,7 +11,7 @@ routes.post("/signup", async (req, res) => {
             ...req.body
         })
         await newUser.save()
-        res.status(201).send(newUser)
+        res.status(200).send(newUser)
     } catch (error) { //
         res.status(500).send(error)
     }
